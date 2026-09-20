@@ -1,9 +1,13 @@
-PoopySoft V6 — stable flat-upload build
+PoopySoft V7
+============
 
-This version keeps the V3 visual system and site behavior, while retaining the V4 dedicated tools and research content.
+Bug-fix release based on V6.
 
-IMPORTANT: Every website file is at the repository ROOT. There are NO nested folders. This makes GitHub's web uploader easy to use.
+Changes:
+- Calculator result placeholders now say “Awaiting inPOOP.”
+- Fixed the dedicated Poop Name Generator so it actually selects a random name from an array.
+- Expanded the name list with additional original codenames.
+- Kept the flat-file GitHub structure and all existing V6 internals.
+- Google Analytics ID remains G-3QHGZ20T1H.
 
-Upload all files in this folder directly into the root of the poopysoft GitHub repository, then commit to main. Cloudflare Pages will deploy automatically.
-
-Google Analytics: G-3QHGZ20T1H
+Upload the CONTENTS of this folder to the root of the GitHub poopysoft repository, then commit to main.
