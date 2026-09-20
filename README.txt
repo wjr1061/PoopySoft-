@@ -1,9 +1,9 @@
-PoopySoft V5
+PoopySoft V6 — stable flat-upload build
 
-80s-tech redesign with a custom inline SVG poo/computer logo.
-Brand is styled as PoopySoft (capital P and S).
+This version keeps the V3 visual system and site behavior, while retaining the V4 dedicated tools and research content.
+
+IMPORTANT: Every website file is at the repository ROOT. There are NO nested folders. This makes GitHub's web uploader easy to use.
+
+Upload all files in this folder directly into the root of the poopysoft GitHub repository, then commit to main. Cloudflare Pages will deploy automatically.
+
 Google Analytics: G-3QHGZ20T1H
-
-UPLOAD: Upload the CONTENTS of this folder to the ROOT of the GitHub poopysoft repository and commit to main. Cloudflare Pages should deploy automatically.
-
-The logo is embedded in each HTML page, so there is no separate image file required.
