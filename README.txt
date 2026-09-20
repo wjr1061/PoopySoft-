@@ -1,20 +1,9 @@
-POOPYSOFT V4 — DIRECTORY URL BUILD
+PoopySoft V5
 
-This build fixes the dedicated-page serving issue by using index.html inside each tool/research directory.
-
-Upload the CONTENTS of this folder to the root of the GitHub poopysoft repository (main branch), commit, and push. Cloudflare Pages should auto-deploy.
-
-Tool URLs:
-/tools/poop-calculator/
-/tools/toilet-time/
-/tools/tp-cost/
-/tools/bidet-roi/
-/tools/poop-name-generator/
-
-Research URLs:
-/research/toilet-paper-use/
-/research/toilet-time/
-/research/bidet-vs-toilet-paper/
-/research/coffee-and-pooping/
-
+80s-tech redesign with a custom inline SVG poo/computer logo.
+Brand is styled as PoopySoft (capital P and S).
 Google Analytics: G-3QHGZ20T1H
+
+UPLOAD: Upload the CONTENTS of this folder to the ROOT of the GitHub poopysoft repository and commit to main. Cloudflare Pages should deploy automatically.
+
+The logo is embedded in each HTML page, so there is no separate image file required.
