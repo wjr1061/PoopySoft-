@@ -1,5 +1,20 @@
-PoopySoft V4
+POOPYSOFT V4 — DIRECTORY URL BUILD
 
-Static site. Upload/commit the contents to the root of the GitHub repo connected to Cloudflare Pages. Google Analytics Measurement ID: G-3QHGZ20T1H
+This build fixes the dedicated-page serving issue by using index.html inside each tool/research directory.
 
-V4 adds dedicated tool pages, four research articles, research/tools indexes, about page, sitemap.xml, robots.txt, and SEO metadata.
+Upload the CONTENTS of this folder to the root of the GitHub poopysoft repository (main branch), commit, and push. Cloudflare Pages should auto-deploy.
+
+Tool URLs:
+/tools/poop-calculator/
+/tools/toilet-time/
+/tools/tp-cost/
+/tools/bidet-roi/
+/tools/poop-name-generator/
+
+Research URLs:
+/research/toilet-paper-use/
+/research/toilet-time/
+/research/bidet-vs-toilet-paper/
+/research/coffee-and-pooping/
+
+Google Analytics: G-3QHGZ20T1H
