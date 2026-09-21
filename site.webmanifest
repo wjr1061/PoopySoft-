@@ -1,0 +1,16 @@
+{
+  "name": "PoopySoft™ — Enterprise Software for People Who Poop",
+  "short_name": "PoopySoft™",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#ffd84d",
+  "icons": [
+    {
+      "src": "/assets/duke-favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
