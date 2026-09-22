@@ -49,6 +49,10 @@ function runKPI(){
   document.getElementById('report').style.display='block';
   document.getElementById('shareStatus').textContent='';
 }
+const cardWordmark=new Image();
+cardWordmark.src='poopysoft-wordmark.png';
+const cardDuke=new Image();
+cardDuke.src='duke-2d.png';
 function scoreCardCanvas(){
   const v=kpiValues();
   const c=document.createElement('canvas'); c.width=1200; c.height=1200;
@@ -56,15 +60,19 @@ function scoreCardCanvas(){
   ctx.fillStyle='#fffdf8'; ctx.fillRect(0,0,c.width,c.height);
   ctx.fillStyle='#ffd84d'; ctx.fillRect(0,0,c.width,330);
   ctx.strokeStyle='#171717'; ctx.lineWidth=6; ctx.strokeRect(22,22,c.width-44,c.height-44);
+  if(cardWordmark.complete && cardWordmark.naturalWidth){
+    ctx.drawImage(cardWordmark,70,42,360,102);
+  } else {
+    ctx.fillStyle='#171717'; ctx.font='900 58px Arial, sans-serif'; ctx.fillText('PoopySoft™',70,95);
+  }
   ctx.fillStyle='#171717';
-  ctx.font='900 58px Arial, sans-serif'; ctx.fillText('PoopySoft™',70,88);
-  ctx.font='800 25px Arial, sans-serif'; ctx.fillText('Enterprise software for people who poop.',72,126);
-  ctx.font='900 31px Arial, sans-serif'; ctx.fillText('POOPYSOFT EXECUTIVE SCORE™',70,205);
-  ctx.font='900 150px Arial, sans-serif'; ctx.fillText(v.score.toFixed(0),70,315);
-  ctx.font='900 42px Arial, sans-serif'; ctx.fillText(v.grade,70,385);
+  ctx.font='800 25px Arial, sans-serif'; ctx.fillText('Enterprise software for people who poop.',72,154);
+  ctx.font='900 31px Arial, sans-serif'; ctx.fillText('POOPYSOFT EXECUTIVE SCORE™',70,215);
+  ctx.font='900 150px Arial, sans-serif'; ctx.fillText(v.score.toFixed(0),70,325);
+  ctx.font='900 42px Arial, sans-serif'; ctx.fillText(v.grade,70,390);
+
   ctx.fillStyle='#b9d9a8'; ctx.fillRect(70,440,1060,450);
   ctx.fillStyle='#171717';
-  ctx.font='900 29px Arial, sans-serif';
   const rows=[
     ['Annual Deposits',v.dep.toLocaleString(undefined,{maximumFractionDigits:0})],
     ['Annual Toilet Hours',v.hrs.toFixed(1)],
@@ -73,10 +81,20 @@ function scoreCardCanvas(){
     ['Annual Paid Pooping Value','$'+v.paid.toLocaleString(undefined,{maximumFractionDigits:0})],
     ['Annual Flushes',v.flushes.toLocaleString(undefined,{maximumFractionDigits:0})]
   ];
-  rows.forEach((r,i)=>{const y=500+i*62;ctx.fillText(r[0],110,y);ctx.textAlign='right';ctx.font='900 30px Arial, sans-serif';ctx.fillText(r[1],1090,y);ctx.textAlign='left';ctx.font='900 29px Arial, sans-serif';});
+  rows.forEach((r,i)=>{
+    const y=500+i*70;
+    ctx.font='900 29px Arial, sans-serif';
+    ctx.textAlign='left'; ctx.fillText(r[0],110,y);
+    ctx.font='900 30px Arial, sans-serif';
+    ctx.textAlign='right'; ctx.fillText(r[1],1090,y);
+  });
+  ctx.textAlign='left';
   ctx.fillStyle='#68645d'; ctx.font='700 23px Arial, sans-serif'; ctx.fillText('Your bathroom operations, now with unnecessary precision.',70,975);
   ctx.fillStyle='#171717'; ctx.font='900 30px Arial, sans-serif'; ctx.fillText('PoopySoft.com',70,1035);
   ctx.font='700 20px Arial, sans-serif'; ctx.fillText('General entertainment only. Results are estimates.',70,1080);
+  if(cardDuke.complete && cardDuke.naturalWidth){
+    ctx.drawImage(cardDuke,1005,1020,125,116);
+  }
   return c;
 }
 function scoreCardBlob(){return new Promise(resolve=>scoreCardCanvas().toBlob(resolve,'image/png'));}
