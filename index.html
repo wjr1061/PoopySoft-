@@ -42,6 +42,26 @@
 #poopyDashCanvas{display:block;width:100%;height:auto;background:#fff;border:2px solid var(--ink);border-radius:10px;margin-top:15px;image-rendering:pixelated;touch-action:none}
 .game-help{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:12px;color:var(--muted);font-size:13px;font-weight:700}.game-start{border:2px solid;border-radius:9px;background:var(--ink);color:#fff;padding:10px 14px;font-weight:900;cursor:pointer;font:inherit}
 @media(max-width:560px){.game-card{display:block}.game-card .game-actions{margin-top:14px}.poopy-game-fab{right:12px;bottom:12px}.poopy-game-panel{padding:13px}.game-top h2{font-size:25px}.game-help{display:block}.game-start{margin-top:9px;width:100%}}
+
+/* V50 · Responsive mobile layout */
+@media (max-width:700px){
+  /* Keep the compact two-column desktop layout, but give phones one clean card per row. */
+  #tools .grid{grid-template-columns:1fr;gap:16px}
+  #tools .card{width:100%}
+  #tools .game-card{grid-column:1/-1;width:100%;}
+  #products .product-groups-grid{grid-template-columns:1fr;gap:18px}
+  #products .product-group{width:100%;}
+  #products .product-grid{grid-template-columns:1fr;gap:14px}
+  #products .product-card{width:100%;min-height:0;}
+  #products .group-duke{width:52px;height:52px;top:10px;right:12px;}
+  #products .product-group h3{padding-right:62px;}
+}
+@media (max-width:420px){
+  #tools .card{padding:20px}
+  #tools .game-card{padding:20px}
+  #tools .game-card .game-duke{width:56px;height:56px;top:11px;right:12px}
+  #products .product-group{padding:20px}
+}
 </style><link rel="icon" type="image/png" sizes="32x32" href="/duke-favicon-32.png"><link rel="icon" type="image/png" sizes="512x512" href="/duke-favicon-512.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"></head><body>
 <header><div class="wrap nav"><div class="brand-block"><a class="brand" href="#"><img class="duke-header" src="duke-2d.png" alt="Duke Dumpsworth™"><span class="brand-copy"><span class="brand-name"><b>PoopySoft™</b></span><span class="brand-tagline">Enterprise software for people who poop.</span></span></a></div><nav><a href="#tools">Software</a><a href="#products">Products</a><a href="#numbers">Numbers</a><a href="#research">Research</a><a href="#about">About</a></nav></div></header>
 <main><section class="hero"><div class="wrap hero-grid"><div><div class="kicker">EST. 2026 · BATHROOM TECHNOLOGY</div><h1>Serious software for unserious biological processes.</h1><p>Free, unnecessarily sophisticated tools for the world's most under-optimized room: the bathroom.</p><div class="buttons"><div class="button-stack"><a class="btn" href="#tools">Launch the Software ↓</a><a class="btn product-link" href="#products">Bathroom Product Intelligence ↓</a></div><a class="btn alt" href="#about">Why does this exist?</a><a class="merch-nav" href="https://poopysoft-shop.fourthwall.com" target="_blank" rel="noopener noreferrer"><strong>PoopySoft™ Store</strong></a></div></div><div class="hero-cards"><div class="toilet"><div>🚽</div><strong>Enterprise-grade bathroom analytics.</strong><span>Now with 37% more unnecessary precision.</span></div><div class="toilet"><div>😎</div><strong>Endless poopabilities in a boundless world.</strong><span>Now with 100% more information.</span></div></div></div></section>
